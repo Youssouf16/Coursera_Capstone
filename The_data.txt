@@ -1,0 +1,17 @@
+The data
+
+For solving our problem, these are the keys datas we will use:
+- number of existing restaurants in the neighborhood (any type of restaurant)
+- number of and distance to Italian restaurants in the neighborhood, if any
+- distance of neighborhood from city center
+
+To have these data we will start from:
+- Neighborhood Address
+- Latitude
+- Longitude
+- UTM(X)
+- UTM(Y)
+
+These data are available through :
+- Google Maps API geocoding and reverse geocoding to generate centers of candidate areas and approximate distance of neighborhood from city center. geocoding will be used to generate coordinates.
+- Foursquare API to get number of restaurants and their type and location in every neighborhood 

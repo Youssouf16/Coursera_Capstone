@@ -1,0 +1,4 @@
+In this project, the goal will be to find the best location to open a Chinese restaurant in Rome, Italy. 
+The idea will be to find a location with less density of restaurant and with no Chinese restaurant nearby. We will focus our studies on the center of the city as it is more likely to get us many clients.
+, this report will be targeted to stakeholders interested in opening a Chinese restaurant in Rome, Italy.
+We will use our data science powers to generate a few most promissing neighborhoods based on this criteria. Advantages of each area will then be clearly expressed so that best possible final location can be chosen by stakeholders.
