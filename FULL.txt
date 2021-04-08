@@ -1,0 +1,79 @@
+Introduction
+
+
+
+In this project, the goal will be to find the best location to open a Chinese restaurant in Rome, Italy. 
+The idea will be to find a location with less density of restaurant and with no Chinese restaurant nearby. We will focus our studies on the center of the city as it is more likely to get us many clients.
+This report will be targeted to stakeholders interested in opening a Chinese restaurant in Rome, Italy.
+We will use our data science powers to generate a few most promissing neighborhoods based on this criteria. Advantages of each area will then be clearly expressed so that best possible final location can be chosen by stakeholders.
+
+
+
+The data
+
+
+
+For solving our problem, these are the keys datas we will use:
+- number of existing restaurants in the neighborhood (any type of restaurant)
+- number of and distance to Italian restaurants in the neighborhood, if any
+- distance of neighborhood from city center
+
+To have these data we will start from:
+- Neighborhood Address
+- Latitude
+- Longitude
+- UTM(X)
+- UTM(Y)
+
+These data are available through :
+- Google Maps API geocoding and reverse geocoding to generate centers of candidate areas and approximate distance of neighborhood from city center. geocoding will be used to generate coordinates.
+- Foursquare API to get number of restaurants and their type and location in every neighborhood 
+
+
+
+Methodology
+
+
+
+
+Starting out, I will get the coordinates of the center of Rome using google geocoding, define function to convert from longitude, latitude to UTM coordinate and vice versa, define a function to get geographical coordinates using google API geocoding.
+
+As the goal of the project is to open a restaurant in the center of Rome, I chose to work with area within 6km from my city center. 
+Using Foursquares API, I generate candidate neighborhood centers and with the help of google geocoding API, I derived their addresses.
+
+Then, I used Foursquares API to generate restaurants within 6km from my city center and identify Chinese restaurants.
+My next step is to identify distances from the area center to the restaurants and find the number of Chinese restaurant in each area.
+
+After This, we can observe through a heat map density of restaurant in our work area and another heat map to view density of Chinese restaurants in each area.
+
+Finaly, we define criteria of good location and derive best locations for Chinese restaurant, cluster them and see them on a map. With this, we can derive the 15 best locations.
+
+
+
+Results and Discussion
+
+
+
+Through this analysis, our goal was to determine best locations to open a chinese restaurant. During this analysis, we have focused our analysis on area within 6km range from Piazza dei Cinquecento with was condisered  as center of Roma. We derived the following results:
+Total number of restaurants: 1583
+Total number of chinese restaurants: 70
+Percentage of chinese restaurants: 4.42%
+Average number of restaurants in neighborhood: 3.771978021978022
+
+With the help of heat map, we derived location with more concentration of restaurants.
+
+Finaly we derived good locations as Locations with no more than two restaurants and with no Chinese restaurants within 400m.
+With that, we derive the 15 best places among them:
+
+Viale Carlo Tommaso Odescalchi, 67, 00147 Roma RM  => 5.0km from Piazza dei Cinquecento
+Via dei Monti di Pietralata, 127, 00157 Roma RM    => 2.9km from Piazza dei Cinquecento
+Via Pier Andrea Asaccardo, 00159 Roma RM           => 1.8km from Piazza dei Cinquecento
+
+
+As this analysis wasn't based on specific criterias, if needed more specific criterias can be given to narrow the results and be more specialized.
+
+
+Conclusion 
+
+The pupose of the study was to derive optimal location to open a restaurant in Roma, within a area no more than 6km away from the city center, with no more than two restaurants and with no Chinese restaurants within 400m.
+Final decission on optimal restaurant location will be made by stakeholders based on specific characteristics of neighborhoods and locations in every recommended zone, taking into consideration additional factors like attractiveness of each location (proximity to park or water), levels of noise / proximity to major roads, real estate availability, prices, social and economic dynamics of every neighborhood etc.
